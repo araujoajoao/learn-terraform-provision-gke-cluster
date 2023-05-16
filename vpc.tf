@@ -2,11 +2,11 @@
 # SPDX-License-Identifier: MPL-2.0
 
 variable "project_id" {
-  description = "project id"
+  description = "bigdatatest2-airflow"
 }
 
 variable "region" {
-  description = "region"
+  description = "us-east1"
 }
 
 provider "google" {

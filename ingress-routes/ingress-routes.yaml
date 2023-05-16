@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nifi-ingress-routes
+spec:
+  rules:
+  - host: frontend.20.74.3.106.nip.io
+    http:
+      paths:
+      - backend:
+          serviceName: nifi
+          servicePort: 8080
+        path: /
