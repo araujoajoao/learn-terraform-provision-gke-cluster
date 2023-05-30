@@ -1,13 +1,10 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nifi-ingress-routes
+  name: ingress-routes
 spec:
-  rules:
-  - host: frontend.10.171.240.1.nip.io
-    http:
-      paths:
-      - backend:
-          serviceName: nifi
-          servicePort: 8080
-        path: /
+  defaultBackend:
+    service:
+      name: web
+      port:
+        number: 8080
